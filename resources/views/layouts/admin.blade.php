@@ -102,9 +102,9 @@
             </li>
 
             <li class="treeview">
-              <a href="#">
+              <a href="egresados">
                 <i class="fa fa-th"></i>
-                <span>Breeds</span>
+                <span>egresados</span>
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
