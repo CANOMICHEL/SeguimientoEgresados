@@ -107,34 +107,7 @@
 
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-<<<<<<< HEAD
             @yield('panel')
-=======
-            <li class="header"></li>
-
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-laptop"></i>
-                <span>Pets</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="cats"><i class="fa fa-circle-o"></i> Cats</a></li>
-              </ul>
-            </li>
-
-            <li class="treeview">
-              <a href="egresados">
-                <i class="fa fa-th"></i>
-                <span>egresados</span>
-                 <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="breeds"><i class="fa fa-circle-o"></i> Breeds</a></li>
-              </ul>
-            </li>
-
->>>>>>> b841064e49378ef16f1c1add1a09f9f6f573e3c5
             <li>
               <a href="#">
               <i class="fa fa-plus-square"></i> <span>Ayuda</span>
