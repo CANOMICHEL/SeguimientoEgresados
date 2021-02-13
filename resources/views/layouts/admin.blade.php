@@ -21,12 +21,10 @@
     <link rel="shortcut icon" href="AdminLTE/img/favicon.ico">
 
   </head>
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body class="hold-transition skin-blue-light sidebar-mini">
     <div class="wrapper">
 
       <header class="main-header">
-
-        <!-- Logo -->
         <a href="/home" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>L</b>C</span>
@@ -44,37 +42,58 @@
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
               <!-- Messages: style can be found in dropdown.less-->
-
-              <!-- User Account: style can be found in dropdown.less -->
-              <li class="dropdown user user-menu">
+              <li class="dropdown messages-menu">
+                <!-- Menu toggle button -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <small class="bg-red">Online</small>
-                  <span class="hidden-xs">MCL</span>
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="label label-success">4</span>
                 </a>
                 <ul class="dropdown-menu">
-                  <!-- User image -->
-                  <li class="user-header">
-
-                    <p>
-                      WZP
-                      <small>02.01.2018</small>
-                    </p>
+                  <li class="header">You have 4 messages</li>
+                  <li>
+                    <!-- inner menu: contains the messages -->
+                    <ul class="menu">
+                      <li>
+                        <!-- start message -->
+                        <a href="#">
+                          <div class="pull-left">
+                            <!-- User Image -->
+                            <img src="https://almsaeedstudio.com/themes/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                          </div>
+                          <!-- Message title and timestamp -->
+                          <h4>
+                              Support Team
+                              <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                            </h4>
+                          <!-- The message -->
+                          <p>Why not buy a new awesome theme?</p>
+                        </a>
+                      </li>
+                      <!-- end message -->
+                    </ul>
+                    <!-- /.menu -->
                   </li>
-
-                  <!-- Menu Footer-->
-                  <li class="user-footer">
-
-                    <div class="pull-right">
-                      <a href=" {{route('logout')}}" class="btn btn-default btn-flat" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                    {{__('Logout')}}</a>
-                      <form action=" {{route('logout')}} " id="logout-form" method="POST" style="display:none;">
-                        @csrf
-                      </form>
-                    </div>
-                  </li>
+                  <li class="footer"><a href="#">See All Messages</a></li>
                 </ul>
               </li>
+              <!-- /.messages-menu -->
 
+              <!-- User Account Menu -->
+              
+              <li class="dropdown">
+                <!-- Menu Toggle Button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <span class="hidden-xs">Alexander</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="fa fa-user"></i> Perfil</a></li>
+                  <li><a href=" {{route('logout')}}"  onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                          <i class="fa fa-sign-out"></i> Cerrar sesión</a>
+                                  <form action=" {{route('logout')}} " id="logout-form" method="POST" style="display:none;">
+                                      @csrf
+                                  </form>
+                </ul>
+              </li>
             </ul>
           </div>
 
@@ -88,6 +107,9 @@
 
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
+<<<<<<< HEAD
+            @yield('panel')
+=======
             <li class="header"></li>
 
             <li class="treeview">
@@ -112,19 +134,19 @@
               </ul>
             </li>
 
+>>>>>>> b841064e49378ef16f1c1add1a09f9f6f573e3c5
             <li>
               <a href="#">
-                <i class="fa fa-plus-square"></i> <span>Ayuda</span>
-                <small class="label pull-right bg-red">PDF</small>
+              <i class="fa fa-plus-square"></i> <span>Ayuda</span>
+              <small class="label pull-right bg-red">PDF</small>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fa fa-info-circle"></i> <span>Nosotros</span>
-                <small class="label pull-right bg-yellow">IT</small>
+              <i class="fa fa-info-circle"></i> <span>Nosotros</span>
+              <small class="label pull-right bg-yellow">IT</small>
               </a>
             </li>
-
           </ul>
         </section>
         <!-- /.sidebar -->
@@ -145,7 +167,7 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">LaraCats - System</h3>
+                  <h3 class="box-title">Egresados - System</h3>
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 
@@ -176,7 +198,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 2.1.18
         </div>
-        <strong>Copyright &copy; 2020 <a href="#">160326S@unsaac.edu.pe</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2021 <a href="#">epiis</a>.</strong> All rights reserved.
       </footer>
 
     <script src="/js/app.js"></script>
