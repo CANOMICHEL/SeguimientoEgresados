@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="AdminLTE/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="AdminLTE/css/font-awesome.css">
+    <link rel="stylesheet" href="AdminLTE/css/font-awesome.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="AdminLTE/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -27,7 +28,7 @@
       <header class="main-header">
         <a href="/home" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>L</b>C</span>
+          <span class="logo-mini"><b>I</b>N</span>
           <!-- logo for regular state and mobile devices -->
           <span class="logo-lg"><b>EPIIS</b></span>
         </a>
@@ -141,11 +142,6 @@
               <div class="box">
                 <div class="box-header with-border">
                   <h3 class="box-title">Egresados - System</h3>
-                  <div class="box-tools pull-right">
-                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-
-                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                  </div>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
