@@ -84,7 +84,7 @@
               <li class="dropdown">
                 <!-- Menu Toggle Button -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <span class="hidden-xs">Alexander</span>
+                  <span class="hidden-xs">MCL</span>
                 </a>
                 <ul class="dropdown-menu">
                   <li><a href="#"><i class="fa fa-user"></i> Perfil</a></li>
@@ -111,7 +111,7 @@
             @yield('panel')
             <li>
               <a href="#">
-              <i class="fa fa-plus-square"></i> <span>Ayuda</span>
+              <i class="fa fa-question-circle"></i> <span>Ayuda</span>
               <small class="label pull-right bg-red">PDF</small>
               </a>
             </li>

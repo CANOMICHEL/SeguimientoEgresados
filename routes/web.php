@@ -21,7 +21,11 @@ Route::get('/', function () {
 });
 Auth::routes();
 
+Route::resource('events', 'EventController');
+Route::resource('investigations', 'InvestigationController');
+Route::resource('graduates', 'GraduateController');
 Route::resource('postgraduates', 'PostgraduateController');
+Route::resource('jobs', 'JobController');
 
 
 //Route::get('/home', 'HomeController@index')->name('home');

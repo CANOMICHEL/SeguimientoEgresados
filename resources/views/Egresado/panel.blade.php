@@ -21,14 +21,14 @@
     <li class="treeview">
         <a href="#">
         <i class="fa fa-th"></i>
-        <span>Seguimiento</span>
-            <i class="fa fa-angle-left pull-right"></i>
+        <span>Formación y empleo</span>
+            <i class="fa fa-angle-right pull-right"></i>
         </a>
         <ul class="treeview-menu">
-        <li><a href="#"><i class="fa fa-circle-o"></i> Actividad profesional</a></li>
-        <li><a href="#"><i class="fa fa-circle-o"></i> Proyectos de investigación</a></li>
-        <li><a href="#"><i class="fa fa-circle-o"></i> Participación en eventos académicos</a></li>
-        <li><a href="postgraduates"><i class="fa fa-circle-o"></i> Estudios postgrado</a></li>
+        <li><a href="#"><i class="fa fa-briefcase"></i> Actividad profesional</a></li>
+        <li><a href="investigations"><i class="fa fa-flask"></i> Proyectos de investigación</a></li>
+        <li><a href="events"><i class="fa fa-certificate"></i> Eventos académicos</a></li>
+        <li><a href="postgraduates"><i class="fa fa-graduation-cap"></i> Estudios postgrado</a></li>
         </ul>
     </li>
 @endsection

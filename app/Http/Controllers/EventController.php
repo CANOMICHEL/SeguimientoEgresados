@@ -4,9 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Event;
 use Illuminate\Http\Request;
-
+use App\user;
+use Auth;
+use DB;
 class EventController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+      $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +26,11 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $user=User::findorfail(auth::user()->id);
+        $eventos = DB::table('events')
+                ->where('graduated_id', '=', $user->id)
+                ->get();
+        return view('Egresado.eventos', compact('eventos'));
     }
 
     /**
@@ -33,9 +49,19 @@ class EventController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $event = new Event;
+        $event->graduated_id = $id;
+        $event->type = $request->type;
+        $event->event_name = $request->event_name;
+        $event->condition = $request->condition;
+        $event->description = $request->description;
+        $event->institution = $request->intitution;
+        $event->start_date = $request->start_date;
+        $event->end_date = $request->end_date;
+
+        $event->save();
     }
 
     /**
@@ -44,7 +70,7 @@ class EventController extends Controller
      * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show(Event $id)
     {
         //
     }

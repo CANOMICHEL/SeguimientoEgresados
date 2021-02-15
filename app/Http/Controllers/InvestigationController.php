@@ -4,9 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Investigation;
 use Illuminate\Http\Request;
-
+use App\user;
+use Auth;
+use DB;
 class InvestigationController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+      $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +26,11 @@ class InvestigationController extends Controller
      */
     public function index()
     {
-        //
+        $user=User::findorfail(Auth::user()->id);
+        $investigaciones = DB::table('investigations')
+                ->where('graduated_id', '=', $user->id)
+                ->get();
+        return view('egresado.investigations', compact('investigaciones'));
     }
 
     /**
@@ -33,9 +49,17 @@ class InvestigationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $investigation = new investigation;
+        $investigation->graduated_id = $id;
+        $investigation->type = $request->type;
+        $investigation->draft_name = $request->investigation_name;
+        $investigation->description = $request->description;
+        $investigation->institution = $request->intitution;
+        $investigation->date = $request->date;
+
+        $investigation->save();
     }
 
     /**
