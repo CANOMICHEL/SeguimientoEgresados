@@ -35,7 +35,9 @@ class PostgraduateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+
+
     }
 
     /**

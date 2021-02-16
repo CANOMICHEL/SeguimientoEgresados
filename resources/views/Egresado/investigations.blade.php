@@ -32,7 +32,7 @@
                     @endforeach
                 </tbody>
             </table>
-            @include('Egresado.create')
+            @include('Egresado.create_event')
         </div>
     </div>
 </div>

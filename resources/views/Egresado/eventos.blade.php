@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
         <h3>Los eventos en los que participaste</h3>
-        <a href="" data-target="#modal-create" data-toggle="modal">
+        <a href="" data-target="#modal-create-event" data-toggle="modal">
             <button class="btn btn-primary"><span class="fa fa-plus-circle"></span> Agregar </button>
         </a>
     </div>
@@ -34,7 +34,7 @@
                     @endforeach
                 </tbody>
             </table>
-            @include('Egresado.create')
+            @include('Egresado.create_event')
         </div>
     </div>
 </div>

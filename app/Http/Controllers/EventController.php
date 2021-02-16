@@ -26,7 +26,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $user=User::findorfail(auth::user()->id);
+        $user=User::findorfail(Auth::user()->id);
         $eventos = DB::table('events')
                 ->where('graduated_id', '=', $user->id)
                 ->get();
@@ -49,19 +49,20 @@ class EventController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $id)
+    public function store(Request $request)
     {
         $event = new Event;
-        $event->graduated_id = $id;
+        $event->graduated_id = $request->user()->id;
         $event->type = $request->type;
         $event->event_name = $request->event_name;
         $event->condition = $request->condition;
         $event->description = $request->description;
-        $event->institution = $request->intitution;
+        $event->institution = $request->institution;
         $event->start_date = $request->start_date;
         $event->end_date = $request->end_date;
 
         $event->save();
+        return redirect()->route('events.index');
     }
 
     /**

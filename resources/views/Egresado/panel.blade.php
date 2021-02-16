@@ -25,7 +25,7 @@
             <i class="fa fa-angle-right pull-right"></i>
         </a>
         <ul class="treeview-menu">
-        <li><a href="#"><i class="fa fa-briefcase"></i> Actividad profesional</a></li>
+        <li><a href="jobs"><i class="fa fa-briefcase"></i> Actividad profesional</a></li>
         <li><a href="investigations"><i class="fa fa-flask"></i> Proyectos de investigación</a></li>
         <li><a href="events"><i class="fa fa-certificate"></i> Eventos académicos</a></li>
         <li><a href="postgraduates"><i class="fa fa-graduation-cap"></i> Estudios postgrado</a></li>
