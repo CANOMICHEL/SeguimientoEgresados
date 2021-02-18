@@ -32,8 +32,8 @@ PUEDES GUIARTE CON EL ARCHIVO create_event.blade.php
 						</div>
 
 						<div class="form-group">
-							<label for="nombre">Tipo de institución</label>
-							<textarea name="institution_type" rows="4" class="form-control" placeholder="Tipo de institución"></textarea>
+							<label for="nombre">Descripción</label>
+							<textarea name="description" rows="4" class="form-control" placeholder="Descripción"></textarea>
 						</div>
 					</div>
 					<div class="col-sm-6">
@@ -43,8 +43,8 @@ PUEDES GUIARTE CON EL ARCHIVO create_event.blade.php
 						</div>
 
 						<div class="form-group">
-								<label for="nombre">Descripcion</label>
-								<input type="text" class="form-control" name="description" placeholder="Descripcion">
+								<label for="nombre">Tipo de institución</label>
+								<input type="text" class="form-control" name="institution_type" placeholder="Tipo de institución">
 						</div>
 						<div class="form-group">
 							<label for="nombre">Fecha de inicio</label>
