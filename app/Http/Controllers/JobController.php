@@ -52,7 +52,7 @@ class JobController extends Controller
     {
         $job = new Job;
         $job->graduated_id = $request->user()->id;
-        $job->institution = $request->intitution;
+        $job->institution = $request->institution;
         $job->activity_name = $request->activity_name;
         $job->position = $request->position;
         $job->institution_type = $request->institution_type;
