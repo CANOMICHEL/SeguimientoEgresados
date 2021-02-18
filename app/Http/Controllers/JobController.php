@@ -93,9 +93,20 @@ class JobController extends Controller
      * @param  \App\Job  $job
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Job $job)
+    public function update(Request $request, $id)
     {
-        //
+        $job = Job::find($id);
+        $job->graduated_id = $request->user()->id;
+        $job->institution = $request->institution;
+        $job->activity_name = $request->activity_name;
+        $job->position = $request->position;
+        $job->institution_type = $request->institution_type;
+        $job->institution_heading = $request->institution_heading;
+        $job->description = $request->description;
+        $job->start_date = $request->start_date;
+        $job->end_date = $request->end_date;
+        $job->save();
+        return redirect()->route('jobs.index');
     }
 
     /**

@@ -25,7 +25,7 @@
                             <td> {{$item->institution}} </td>
                             <td> {{$item->position}} </td>
                             <td>
-                                <a href="" data-target="" data-toggle="modal"><button class="btn btn-default"><span class="fa fa-pencil"></span> Editar</button></a>
+                                <a href="" data-target="#modal-edit-empleo{{ $item->id }}" data-toggle="modal"><button class="btn btn-default"><span class="fa fa-pencil"></span> Editar</button></a>
                                 <a href=""  data-target="" data-toggle="modal"><button class="btn btn-default"><span class="fa fa-search-plus"></span> Más info</button></a>
                             </td>
                         </tr>
@@ -33,6 +33,7 @@
                 </tbody>
             </table>
             @include('Egresado.create_empleo')
+            @include('Egresado.edit_empleo')
         </div>
     </div>
 </div>
