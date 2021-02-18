@@ -4,9 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Postgraduate;
 use Illuminate\Http\Request;
-
+use App\user;
+use Auth;
+use DB;
 class PostgraduateController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+      $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +25,11 @@ class PostgraduateController extends Controller
      */
     public function index()
     {
-        //
+        $user=User::findorfail(Auth::user()->id);
+        $estudiospost = DB::table('postgraduates')
+                ->where('graduated_id', '=', $user->id)
+                ->get();
+        return view('Egresado.postgrado', compact('estudiospost'));
     }
 
     /**
@@ -35,9 +50,16 @@ class PostgraduateController extends Controller
      */
     public function store(Request $request)
     {
-        
-
-
+        $postgraduate = new Postgraduate;
+        $postgraduate->graduated_id = $request->user()->id;
+        $postgraduate->type = $request->type;
+        $postgraduate->activity_name = $request->activity_name;
+        $postgraduate->description = $request->description;
+        $postgraduate->institution = $request->institution;
+        $postgraduate->start_date = $request->start_date;
+        $postgraduate->end_date = $request->end_date;
+        $postgraduate->save();
+        return redirect()->route('postgraduates.index');
     }
 
     /**
