@@ -56,6 +56,7 @@ class PostgraduateController extends Controller
         $postgraduate->activity_name = $request->activity_name;
         $postgraduate->description = $request->description;
         $postgraduate->institution = $request->institution;
+        $postgraduate->document = $request->document;
         $postgraduate->start_date = $request->start_date;
         $postgraduate->end_date = $request->end_date;
         $postgraduate->save();
