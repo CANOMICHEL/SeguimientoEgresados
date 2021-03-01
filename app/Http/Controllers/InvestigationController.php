@@ -49,17 +49,17 @@ class InvestigationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $id)
+    public function store(Request $request)
     {
-        $investigation = new investigation;
-        $investigation->graduated_id = $id;
+        $investigation = new Investigation;
+        $investigation->graduated_id = $request->user()->id;
         $investigation->type = $request->type;
-        $investigation->draft_name = $request->investigation_name;
+        $investigation->draft_name = $request->draft_name;
         $investigation->description = $request->description;
-        $investigation->institution = $request->intitution;
+        $investigation->institution = $request->institution;
         $investigation->date = $request->date;
-
         $investigation->save();
+        return redirect()->route('investigations.index');
     }
 
     /**
@@ -91,9 +91,17 @@ class InvestigationController extends Controller
      * @param  \App\Investigation  $investigation
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Investigation $investigation)
+    public function update(Request $request, $id)
     {
-        //
+        $investigation = Investigation::find($id);
+        $investigation->graduated_id = $request->user()->id;
+        $investigation->type = $request->type;
+        $investigation->draft_name = $request->draft_name;
+        $investigation->description = $request->description;
+        $investigation->institution = $request->institution;
+        $investigation->date = $request->date;
+        $investigation->save();
+        return redirect()->route('investigations.index');
     }
 
     /**

@@ -1,18 +1,15 @@
-<!-- Debes crear una tabla para visualizar los 
-    registros de estudios de postgrado de un egresado
-PUEDES GUIARTE CON EL ARCHIVO eventos.blade.php
-aqui recuperaras los datos desde $estudiospost 
--->
 @extends('Egresado.panel')
+@section('titulo')
+<h3>Seguimiento de los estudios de actualización y/o continua capacitación profesional</h3>
+@endsection
 @section('contenido')
 <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-        <h3>Estudios de Posgrado</h3>
         <a href="" data-target="#modal-create-postgrado" data-toggle="modal">
             <button class="btn btn-primary"><span class="fa fa-plus-circle"></span> Agregar </button>
         </a>
     </div>
-    
+
 </div>
 <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

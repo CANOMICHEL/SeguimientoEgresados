@@ -94,9 +94,20 @@ class EventController extends Controller
      * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Event $event)
+    public function update(Request $request, $id)
     {
-        //
+        $event = Event::find($id);
+        $event->graduated_id = $request->user()->id;
+        $event->type = $request->type;
+        $event->event_name = $request->event_name;
+        $event->condition = $request->condition;
+        $event->description = $request->description;
+        $event->institution = $request->institution;
+        $event->start_date = $request->start_date;
+        $event->end_date = $request->end_date;
+
+        $event->save();
+        return redirect()->route('events.index');
     }
 
     /**

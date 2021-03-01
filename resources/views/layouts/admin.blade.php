@@ -22,7 +22,7 @@
     <link rel="shortcut icon" href="AdminLTE/img/favicon.ico">
 
   </head>
-  <body class="hold-transition skin-blue-light sidebar-mini">
+  <body class="hold-transition skin-yellow sidebar-mini">
     <div class="wrapper">
 
       <header class="main-header">
@@ -80,7 +80,7 @@
               <!-- /.messages-menu -->
 
               <!-- User Account Menu -->
-              
+
               <li class="dropdown">
                 <!-- Menu Toggle Button -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -139,9 +139,9 @@
 
           <div class="row">
             <div class="col-md-12">
-              <div class="box">
+              <div class="box box-primary">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Egresados - System</h3>
+                    @yield('titulo')
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -162,13 +162,13 @@
 
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
-      <!--Fin-Contenido-->
+      <!--Fin-Contenido
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
           <b>Version</b> 2.1.18
         </div>
         <strong>Copyright &copy; 2021 <a href="#">epiis</a>.</strong> All rights reserved.
-      </footer>
+      </footer>-->
 
     <script src="/js/app.js"></script>
     <!-- jQuery 2.1.4 -->
