@@ -31,7 +31,8 @@
                             <td>
                                 <a href="" data-target="#modal-edit-event{{ $event->id }}" data-toggle="modal"><button class="btn btn-default"><span class="fa fa-pencil"></span> Editar</button></a>
                                 @include('Egresado.edit_evento')
-                                <a href=""  data-target="" data-toggle="modal"><button class="btn btn-default"><span class="fa fa-search-plus"></span> Más info</button></a>
+                                <a href="" data-target="#modal-masInfo-event{{$event->id}}" data-toggle="modal"><button class="btn btn-default"><span class="fa fa-search-plus"></span> Más info</button></a>
+                                @include('Egresado.masInfo_evento')
                             </td>
                         </tr>
                     @endforeach

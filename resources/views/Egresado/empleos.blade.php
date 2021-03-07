@@ -31,7 +31,8 @@
                             <td>
                                 <a href="" data-target="#modal-edit-empleo{{ $job->id }}" data-toggle="modal"><button class="btn btn-default"><span class="fa fa-pencil"></span> Editar</button></a>
                                 @include('Egresado.edit_empleo')
-                                <a href=""  data-target="" data-toggle="modal"><button class="btn btn-default"><span class="fa fa-search-plus"></span> Más info</button></a>
+                                <a href="" data-target="#modal-masInfo-empleo{{ $job->id }}" data-toggle="modal"><button class="btn btn-default"><span class="fa fa-search-plus"></span> Más info</button></a>
+                                @include('Egresado.masInfo_empleo')
                             </td>
                         </tr>
                     @endforeach
