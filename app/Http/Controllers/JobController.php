@@ -26,9 +26,11 @@ class JobController extends Controller
     public function index()
     {
         $user=User::findorfail(Auth::user()->id);
-        $empleos  = DB::table('jobs')
-                ->where('graduated_id', '=', $user->id)
-                ->get();
+        $empleos = DB::table('jobs')
+                  ->join('graduates','jobs.graduated_id','=','graduates.id')
+                  ->where('graduates.user_id','=',$user->id)
+                  ->select('jobs.*')
+                  ->get();
         return view('Egresado.empleos', compact('empleos'));
     }
 

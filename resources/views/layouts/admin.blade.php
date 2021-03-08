@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="AdminLTE/css/_all-skins.min.css">
     <link rel="apple-touch-icon" href="AdminLTE/img/apple-touch-icon.png">
     <link rel="shortcut icon" href="AdminLTE/img/favicon.ico">
-
+    <link rel="stylesheet" href="/css/custom.css">
   </head>
-  <body class="hold-transition skin-yellow sidebar-mini">
+  <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
 
       <header class="main-header">

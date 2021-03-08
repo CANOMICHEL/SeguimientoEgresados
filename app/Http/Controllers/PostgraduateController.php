@@ -27,8 +27,10 @@ class PostgraduateController extends Controller
     {
         $user=User::findorfail(Auth::user()->id);
         $estudiospost = DB::table('postgraduates')
-                ->where('graduated_id', '=', $user->id)
-                ->get();
+                  ->join('graduates','postgraduates.graduated_id','=','graduates.id')
+                  ->where('graduates.user_id','=',$user->id)
+                  ->select('postgraduates.*')
+                  ->get();
         return view('Egresado.postgrado', compact('estudiospost'));
     }
 

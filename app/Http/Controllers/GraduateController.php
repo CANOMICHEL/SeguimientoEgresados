@@ -23,8 +23,7 @@ class GraduateController extends Controller
      */
     public function index()
     {
-        $graduados = Graduate::paginate(10);
-        return view('graduados.index', compact('graduados'));
+        return view('Egresado.perfil_usuario');
     }
 
     /**

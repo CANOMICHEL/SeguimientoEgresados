@@ -27,10 +27,17 @@ class InvestigationController extends Controller
     public function index()
     {
         $user=User::findorfail(Auth::user()->id);
-        $investigaciones = DB::table('investigations')
+        /*$investigaciones = DB::table('investigations')
                 ->where('graduated_id', '=', $user->id)
-                ->get();
+                ->get();*/
+        $investigaciones = DB::table('investigations')
+                          ->join('graduates','investigations.graduated_id','=','graduates.id')
+                          ->where('graduates.user_id','=',$user->id)
+                          ->select('investigations.*')
+                          ->get();
         return view('egresado.investigations', compact('investigaciones'));
+
+
     }
 
     /**

@@ -28,8 +28,10 @@ class EventController extends Controller
     {
         $user=User::findorfail(Auth::user()->id);
         $eventos = DB::table('events')
-                ->where('graduated_id', '=', $user->id)
-                ->get();
+                  ->join('graduates','events.graduated_id','=','graduates.id')
+                  ->where('graduates.user_id','=',$user->id)
+                  ->select('events.*')
+                  ->get();
         return view('Egresado.eventos', compact('eventos'));
     }
 

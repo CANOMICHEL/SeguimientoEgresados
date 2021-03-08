@@ -8,7 +8,7 @@
         <i class="fa fa-angle-right pull-right"></i>
         </a>
         <ul class="treeview-menu">
-        <li><a href="#"><i class="fa fa-id-badge"></i> Mis datos</a></li>
+        <li><a href="graduates"><i class="fa fa-id-badge"></i> Mis datos</a></li>
         <li><a href="#"><i class="fa fa-pencil"></i> Editar información</a></li>
         <li><a href=" {{route('logout')}}"  onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                 <i class="fa fa-sign-out"></i> Cerrar sesión</a>
